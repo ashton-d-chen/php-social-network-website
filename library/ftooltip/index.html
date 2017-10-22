@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+
+<link rel="stylesheet" type="text/css" href="ftp.css" />
+<link rel="stylesheet" type="text/css" href="form.css" />
+<script type="text/javascript" src="tools.js"></script>
+</head>
+
+<body>
+
+
+
+
+<form id="myform" action="#">
+
+	<h3>Registration Form</h3>
+
+	<div id="inputs">
+
+		<!-- username -->
+		<label for="username">Username</label>
+		<input id="username" title="Must be at least 8 characters."/><br />
+
+		<!-- password -->
+		<label for="password">Password</label>
+		<input id="password" type="password" title="Try to make it hard to guess." /><br />
+
+		<!-- email -->
+		<label for="email">Email</label>
+		<input id="email" title="We won't send you any marketing material." /><br />
+
+		<!-- message -->
+		<label for="body">Message</label>
+		<textarea id="body" title="What's on your mind?"></textarea><br />
+
+		<!-- message -->
+		<label for="where">Select one</label>
+		<select id="where" title="Select one of these options">
+			<option>-- first option --</option>
+			<option>-- second option --</option>
+			<option>-- third option --</option>
+		</select>
+		<br />
+	</div>
+
+	<!-- email -->
+	<label>
+		I accept the terms and conditions
+		<input type="checkbox" id="check" title="Required to proceed" />
+	</label>
+
+	<p>
+		<button type="button" title="This button won't do anything">Proceed</button>
+	</p>
+
+</form>
+
+<script type="text/javascript" src="ftp.js"></script>
+</body>
+</html>

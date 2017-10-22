@@ -1,0 +1,36 @@
+.menu {
+	float: left;
+	top: 10px;
+	right: 20px;
+	left: 20px;
+	width: 172px;
+	padding: 10px;
+	background-color: #FFF;
+	border: 1px solid #999;
+	line-height: 17px;
+	width: 150px;
+	border-radius: 15px;
+	-moz-box-shadow: 3px 3px 10px #000;
+	-webkit-box-shadow: 3px 3px 10px #000;
+	box-shadow: 3px 3px 10px #000;
+}
+
+.menu ul {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #666;
+	line-height: 30px;
+	white-space: nowrap;
+}
+
+.menu li {
+	list-style-type: none;
+}
+
+.menu ul li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #666;
+}

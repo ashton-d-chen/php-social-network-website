@@ -1,0 +1,67 @@
+
+
+<!-- End of Content -->
+
+</div>
+<!-- End of container -->
+<div id="footer">
+	<ul>
+		<?php // Display links based upon the login status
+                    if (isset($_SESSION['user_id'])) {
+
+        
+                        // Add a change password links
+        				echo '<li><a href="#" title="' . $words['change_password'] . '"' .  " onclick='" . 'ajaxReq("GET", "content", "http://phpweb.ashtonchen.com/account/change_password.php?tp=23424", "")' . "'>" . $words['change_password'] . '</a></li>';
+                        // Add links if the user is an administrator:
+                        if ($_SESSION['user_level'] == 1) {
+                            echo '<li><a href="#" title="' . $words['view_users'] . '"' .  " onclick='" . 'ajaxReq("GET", "content", "http://phpweb.shtonchen.com/admin/view_users.php", "")' . "'>" . $words['view_users'] . '</a></li>';
+							echo '<li><a href="'. BASE_URL . '/admin/reset.php" >Reset</a></li>';
+						}
+                    }
+        
+                    ?>
+
+		<?php
+                        
+                        // For choosing a language:
+                        echo '<li><form action="../home/index.php" method="get">'
+                         . $words['language'] .' <select name="lid">';           
+                        
+                        // Retrieve all the languages...
+                        $q = "SELECT lang_id, lang FROM languages ORDER BY lang_id ASC";
+                        $r = mysqli_query($dbc, $q);
+                        if (mysqli_num_rows($r) > 0) {
+                            while ($a = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
+                                echo '<option value="' . $a['lang_id'] . '"';
+                                if ($a['lang_id'] == $lid) {
+                                	echo ' selected="selected"';
+                                    }
+                                echo '>' . $a['lang']. '</option>';
+                            }
+                        }
+                        
+                        //mysqli_free_result($r);
+                        unset($a);
+            
+                        echo '</select>
+                        <input class="button" name="submit" type="submit" value="' . $words['submit'] . '" />
+                        </form></li>';     
+                    
+                        ?>
+	</ul>
+	<span style="text-align: right;"> &copy; <?php echo gmDate("Y") . " "; ?>
+		<a href="http://www.ashtonchen.com">Ashton Chen</a></span>
+</div>
+
+
+</div>
+<!-- End of Frame -->
+<!-- <div id="msgbox" class="jGrowl bottom-left"> -->
+
+
+</body>
+</html>
+
+<?php // Flush the buffered output.
+	ob_end_flush();
+?>

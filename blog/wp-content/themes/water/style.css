@@ -1,0 +1,59 @@
+/*
+Theme Name: Water
+Theme URI: http://xpura.co.cc/?page_id=13
+Description: The Water theme is made for easy and quick customization.
+Version: 1.7.1
+Author: Pura, The Undersigned
+Author URI: http://xpura.co.cc/
+Tags: white, blue, green, one-column, two-columns, three-columns
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.right, .alignright {
+	float: right;
+}
+
+.left, .alignleft {
+	float: left;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center {
+	text-align: center;
+}
+
+.wp-caption {
+	background-color: #f3f3f3;
+	border: 1px solid #ddd;
+	text-align: center;
+	padding-top: 4px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.wp-caption p.wp-caption-text {
+	color: #111;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 12px;
+	margin: 0;
+	padding: 0 4px 5px;
+}

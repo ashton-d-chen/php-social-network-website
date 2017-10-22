@@ -1,0 +1,73 @@
+<?php # header.html
+
+include('../includes/ini.inc.php');
+?>
+ 
+ 
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<title>
+			<?php echo $page_title; ?>
+		</title>
+
+
+        <!-- Library -->
+        <script type="text/javascript" src="../includes/js/jquery.js"></script>
+        
+        
+        <script type="text/javascript">
+
+        $(document).ready(function()
+        {
+				
+
+			$(document).on("click", "a", function(){
+					alert("test");
+			});
+
+	
+        });
+		
+		$(window).load(function() {
+
+		});
+        </script>
+
+		<!--[if IE]>
+			<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+        <!--[if IE 7]>
+        		<link rel="stylesheet" href="css/ie.css">
+            	<link rel="stylesheet" href="css/ie7.css">
+        <![endif]-->
+        
+        
+            
+        <!-- Image Overlay -->
+     <!--   <script type="text/javascript" src="../photo/imgoverlay/jquery.tools.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../photo/imgoverlay/iol.css"/> -->
+        <!--[if lt IE 7]>
+        <style> 
+        div.apple_overlay {
+            background-image:url(http://static.flowplayer.org/tools/img/overlay/overlay_IE6.gif);
+            color:#fff;
+        }
+        
+        /* default close button positioned on upper right corner */
+        div.apple_overlay div.close {
+            background-image:url(http://static.flowplayer.org/tools/img/overlay/overlay_close_IE6.gif);
+        
+        }	
+        </style>
+        <![endif]-->
+	</head>
+       
+    <body id="body" class="no-js" >
+
+		<a href="#">Click Me</a>
+		
+</body>
+
+<html>

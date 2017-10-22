@@ -1,0 +1,309 @@
+<?php # header.html
+include('../includes/ini.inc.php');
+?>
+
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title><?php echo $page_title; ?>
+</title>
+
+<link rel="shortcut icon" href="../includes/images/favicon.ico"
+	type="image/x-ico" />
+
+<link rel="stylesheet" type="text/css" href="../includes/css/layout.css" />
+<link rel="stylesheet" type="text/css" href="../includes/css/menu.css" />
+<link rel="stylesheet" type="text/css" href="../includes/css/nav.css" />
+<link rel="stylesheet" type="text/css" href="../includes/css/footer.css" />
+<link rel="stylesheet" type="text/css"
+	href="../includes/css/profile.css" />
+<link rel="stylesheet" type="text/css" href="../home/css/home.css" />
+
+<!-- Photo Stylesheet -->
+<link rel="stylesheet" type="text/css" href="../includes/css/photo.css" />
+<link rel="stylesheet" type="text/css"
+	href="../photo/imgoverlay/iol.css" />
+<!--<script type="text/javascript" src="../photo/imgoverlay/jquery.tools.min.js"></script> -->
+
+<!-- Library -->
+<script type="text/javascript" src="../includes/js/jquery.js"></script>
+<script type="text/javascript" src="../includes/js/modernizr.js"></script>
+<script type="text/javascript" src="../includes/js/ajax.js"></script>
+<script type="text/javascript" src="../includes/js/get_content.js"></script>
+<script type="text/javascript" src="../includes/js/fade_transit.js"></script>
+<script type="text/javascript" src="../includes/js/trans_fade.js"></script>
+
+
+<!-- Message Box -->
+<script type="text/javascript"
+	src="../library/msgbox/js/jquery.jgrowl.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="../library/msgbox/css/jquery.jgrowl.css" />
+
+<!-- Tooltip -->
+<link rel="stylesheet" type="text/css"
+	href="../includes/css/tooltip.css" />
+<link rel="stylesheet" type="text/css" href="../library/tooltip/ftp.css" />
+
+<!-- Fade In Out -->
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+	google.load("jquery", "1");
+	google.load("jqueryui", "1");
+</script>
+<!-- <script src="../js/jquery-1.2.3.pack.js"></script> -->
+<script src="../js/runonload.js"></script>
+<script src="../includes/js/fade_content.js"></script>
+
+
+<script type="text/javascript">
+	$(document)
+			.ready(
+					function() {
+
+						$.getScript("../includes/js/nav.js");
+
+						$("#topNav a").attr("href", "#");
+						// Fade In Body
+						$('body').hide();
+						setTimeout(function() {
+							$('body').hide().fadeIn(500, "linear", function() {
+							});
+						}, 100);
+
+						/*	setTimeout(function(){
+						       $('#msgbox').jGrowl("Welcome to Aquasque !", { life: 10000 });
+						       }, 3000);
+						 */
+
+						// Binding nav links
+						$("#homepage")
+								.on(
+										"click",
+										function() {
+											get_content(
+													"#content",
+													"../home/index.php?tp=8292501",
+													"");
+										});
+						$("#profile").on(
+								"click",
+								function() {
+									get_content("#content",
+											"../profile/index.php?tp=8292501",
+											"");
+								});
+						$("#portfolio")
+								.on(
+										"click",
+										function() {
+											get_content(
+													"#content",
+													"../portfolio/index.php?tp=8292501",
+													"");
+										});
+						$("#gallery")
+								.on(
+										"click",
+										function() {
+											get_content(
+													"#content",
+													"../photo/index.php?tp=8292501",
+													"");
+										});
+						$("#video")
+								.on(
+										"click",
+										function() {
+											get_content(
+													"#content",
+													"../video/index.php?tp=8292501",
+													"");
+										});
+						$("#forum")
+								.on(
+										"click",
+										function() {
+											get_content(
+													"#content",
+													"../forum/index.php?tp=8292501",
+													"");
+										});
+						$("#contact").on(
+								"click",
+								function() {
+									get_content("#content",
+											"../contact/index.php?tp=8292501",
+											"");
+								});
+						//$("#login").on("click",function(){get_content("#content","../account/login.php?tp=8292501", "");});
+						//$("#logout").on("click",function(){get_content("#content","../account/logout.php?tp=8292501", "");});
+
+						/*
+								// 1. Bind album preview images
+								$("body").delegate("#topNav ul li a", "click", function(){	
+									get_content("#content",$(this).attr("href") +"?tp=2252422", '');
+									$(this).attr("href","#");
+								});		
+						 */
+						// Loginout Link
+						<?php if (!isset($_SESSION['user_id']))
+					echo '$.getScript("../account/js/login.js");';
+				  else
+				  	echo '$.getScript("../account/js/logout.js");';
+			?>
+					});
+
+	$(window).load(function() {
+
+	});
+</script>
+
+<!--[if IE]>
+			<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+<!--[if IE 7]>
+        		<link rel="stylesheet" href="css/ie.css">
+            	<link rel="stylesheet" href="css/ie7.css">
+        <![endif]-->
+
+
+
+<!-- Image Overlay 
+        <script type="text/javascript" src="../photo/imgoverlay/jquery.tools.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../photo/imgoverlay/iol.css"/> -->
+
+<!--[if lt IE 7]>
+        <style> 
+        div.apple_overlay {
+            background-image:url(http://static.flowplayer.org/tools/img/overlay/overlay_IE6.gif);
+            color:#fff;
+        }
+        
+        /* default close button positioned on upper right corner */
+        div.apple_overlay div.close {
+            background-image:url(http://static.flowplayer.org/tools/img/overlay/overlay_close_IE6.gif);
+        
+        }	
+        </style>
+        <![endif]-->
+</head>
+
+<body id="body" class="no-js">
+	<div id="frame">
+
+		<img src="../includes/images/h_img.jpg" alt="Header Image" />
+
+		<!-- Nav link -->
+		<script type="text/javascript">
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+		<noscript>
+			<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+		</noscript>
+
+
+		<nav id="topNav">
+			<ul>
+				<li><a id="homepage" href="../home/index.php"
+					title="<?php echo $words['home']; ?>"> <?php echo $words['home']; ?>
+				</a></li>
+
+				<li><a id="profile" href="../profile/index.php"
+					title="<?php echo $words['profile']; ?>"> <?php echo $words['profile']; ?>
+				</a>
+					<ul>
+						<li><a href="../home/index.php" title="">Sub Nav Link 1</a></li>
+						<li><a href="../home/index.php" title="">Sub Nav Link 2</a></li>
+						<li class="last"><a href="../home/index.php"
+							title="Sub Nav Link 3">Sub Nav Link 3</a></li>
+					</ul></li>
+				<!--         <li><a id="portfolio" href="../portfolio/index.php" title="<?php echo $words['portfolio']; ?>"><?php echo $words['portfolio']; ?></a> -->
+				<ul>
+					<li><a href="../home/index.php" title="">Sub Nav Link 1</a></li>
+					<li><a href="../home/index.php" title="">Sub Nav Link 2</a></li>
+					<li><a href="../home/index.php" title="">Sub Nav Link 3</a></li>
+					<li><a href="../home/index.php" title="">Sub Nav Link 4</a></li>
+					<li class="last"><a href="../home/index.php"
+						title="Sub Nav Link 5">Sub Nav Link 5</a></li>
+				</ul>
+				</li>
+
+				<li><a id="gallery" href="../photo/index.php"
+					title="<?php echo $words['photo']; ?>"> <?php echo $words['photo']; ?>
+				</a>
+					<ul>
+						<li><a href="../home/index.php" title="">Sub Nav Link 1</a></li>
+						<li><a href="../home/index.php" title="">Sub Nav Link 2</a></li>
+						<li><a href="../home/index.php" title="">Sub Nav Link 3</a></li>
+						<li class="last"><a href="../home/index.php"
+							title="Sub Nav Link 4">Sub Nav Link 4</a></li>
+					</ul></li>
+
+				<!--     	<li><a id="video" href="../video/index.php" title="<?php echo $words['video']; ?>" ><?php echo $words['video']; ?></a> -->
+				<ul>
+					<li><a href="../home/index.php" title="">Sub Nav Link 1</a></li>
+					<li><a href="../home/index.php" title="">Sub Nav Link 2</a></li>
+					<li><a href="../home/index.php" title="">Sub Nav Link 3</a></li>
+					<li class="last"><a href="../home/index.php"
+						title="Sub Nav Link 4">Sub Nav Link 4</a></li>
+				</ul>
+				<!--     	<li><a href="../blog/index.php" title="<?php echo $words['blog']; ?>"><?php echo $words['blog']; ?></a>  -->
+				<ul>
+					<li><a href="../home/index.php" title="">Sub Nav Link 1</a></li>
+					<li class="last"><a href="../home/index.php"
+						title="Sub Nav Link 2">Sub Nav Link 2</a></li>
+				</ul>
+				</li>
+				<li><a id="forum" href="../forum/index.php"
+					title="<?php echo $words['forum']; ?>"> <?php echo $words['forum']; ?>
+				</a>
+					<ul>
+						<li><a href="../home/index.php" title="">Sub Nav Link 1</a></li>
+						<li><a href="../home/index.php" title="">Sub Nav Link 2</a></li>
+						<li><a href="../home/index.php" title="">Sub Nav Link 3</a></li>
+						<li class="last"><a href="../home/index.php"
+							title="Sub Nav Link 4">Sub Nav Link 4</a></li>
+					</ul></li>
+				<!--    <li ><a id="contact" href="../contact/index.php" title="<?php echo $words['contact']; ?>"><?php echo $words['contact']; ?></a></li> -->
+
+				<?php
+					/*if (isset($_SESSION['user_id'])) {
+						echo '<li ><a id="logout" href="../account/logout.php" title="' . $words['logout'] . '">' . $words['logout'] . '</a></li>';
+					} else {
+						echo '<li ><a id="login" href="../account/login.php" title="' . $words['login'] . '">' . $words['login'] . '</a></li>';
+					}
+					*/
+				?>
+
+				<li class="last"><a
+					href="../account/<?php  
+					if (isset($_SESSION['user_id'])) {
+						echo 'logout.php';
+					}else {
+						echo 'login.php';
+					} ?>"
+					id="loginout"
+					title="<?php  
+						if (isset($_SESSION['user_id'])) {
+							echo $words['logout'];
+						} 
+						else {
+							echo $words['login'];
+						} ?>">
+						<?php  if (isset($_SESSION['user_id'])) {echo $words['logout'];} else {echo $words['login'];} ?>
+				</a></li>
+			</ul>
+		</nav>
+
+
+		<div id="current_page" data-current-page=""></div>
+		<div id="previous_page" data-previous-page=""></div>
+
+		<!-- Container -->
+		<div id="container">
+			<!-- Content Starts -->

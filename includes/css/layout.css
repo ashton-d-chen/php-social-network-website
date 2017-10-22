@@ -1,0 +1,162 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	color: #333;
+	background-color: white;
+}
+
+a {
+	color: #666;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	outline: none;
+}
+
+a:link {
+	text-decoration: none;
+	outline: none;
+} /* unvisited link */
+a:visited {
+	text-decoration: none;
+	outline: none;
+} /* visited link */
+a:hover {
+	text-decoration: none;
+	outline: none;
+} /* mouse over link */
+a:active {
+	text-decoration: none;
+	outline: none;
+} /* selected link */
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+#frame {
+	width: 1280px;
+	left: auto;
+	right: auto;
+	border: solid thin #666;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1 {
+	margin: 0px 0px 15px 0px;
+	padding: 0px;
+	font-family: georgia;
+	font-size: 28px;
+	line-height: 28px;
+	font-weight: 900;
+	color: #ccc;
+}
+
+h2 {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 40px;
+	font-weight: 900;
+	color: #666;
+}
+
+p {
+	font: 14px/20px verdana, arial, helvetica, sans-serif;
+	margin: 0px 0px 16px 0px;
+	padding: 0px;
+}
+
+#Header {
+	text-align: center;
+	font-family: georgia;
+	font-size: 30px;
+	color: #09c;
+	margin: 10px 10px 10px 10px;
+	padding: 20px 30px 20px 30px;
+	/* For IE5/Win's benefit height = [correct height] + [top padding] + [top and bottom border widths] */
+	height: 33px; /* 14px + 17px + 2px = 33px */
+	border-style: solid;
+	border-color: black;
+	border-width: 1px 0px;
+	/* top and bottom borders: 1px; left and right borders: 0px */
+	line-height: 11px;
+	background-color: #eee;
+	/* Here is the ugly brilliant hack that protects IE5/Win from its own stupidity. 
+Thanks to Tantek Celik for the hack and to Eric Costello for publicizing it. 
+IE5/Win incorrectly parses the "\"}"" value, prematurely closing the style 
+declaration. The incorrect IE5/Win value is above, while the correct value is 
+below. See http://glish.com/css/hacks.asp for details. */
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	height: 14px; /* the correct height */
+	width: 1280px;
+}
+/* I've heard this called the "be nice to Opera 5" rule. Basically, it feeds correct 
+length values to user agents that exhibit the parsing error exploited above yet get 
+the CSS box model right and understand the CSS2 parent-child selector. ALWAYS include
+a "be nice to Opera 5" rule every time you use the Tantek Celik hack (above). */
+body>#Header {
+	height: 14px;
+}
+
+#container {
+	min-height: 700px;
+}
+
+#content {
+	width: 1280px;
+	min-height: 500px;
+	margin-top: 30px;
+}
+
+#display {
+	margin-left: 180px;
+	margin-top: 5px;
+	padding: 10px;
+	border: 2px solid #666;
+	border-radius: 8px;
+	height: 700px;
+	-moz-box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 5px #000;
+}
+
+#popup {
+	margin-top: 5px;
+	padding: 10px;
+	border: 2px solid #666;
+	border-radius: 8px;
+	height: 700px;
+	-moz-box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 5px #000;
+}
+
+img {
+	border: 0px none;
+}
+
+button, .button {
+	border: 1px solid #8ec1da;
+	background-color: #ddeef6;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 3px #fff, inset 0 -15px #cbe6f2, 0 0 3px #8ec1da;
+	-o-box-shadow: inset 0 1px 3px #fff, inset 0 -15px #cbe6f2, 0 0 3px
+		#8ec1da;
+	-webkit-box-shadow: inset 0 1px 3px #fff, inset 0 -15px #cbe6f2, 0 0 3px
+		#8ec1da;
+	-moz-box-shadow: inset 0 1px 3px #fff, inset 0 -15px #cbe6f2, 0 0 3px
+		#8ec1da;
+	color: #3985a8;
+	text-shadow: 0 1px #fff;
+	padding: 5px 30px;
+}
+
+/* Again, "be nice to Opera 5". */
+/*body>#Menu {width:150px;}
+*/
+.error {
+	color: #FF0033;
+	font-size: 14px;
+}

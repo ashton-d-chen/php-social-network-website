@@ -1,0 +1,99 @@
+#profile_photo {
+	margin-left: 20px;
+	margin-top: 40px;
+	padding-top: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+	float: left;
+	border: 5px solid black;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #888888
+}
+
+#profile_info {
+	text-align: left;
+	margin-left: 200px;
+}
+
+#profile_info .title {
+	font-weight: bold;
+	font-size: 1.1em;
+	margin: 8px;
+	margin-top: 20px;
+}
+
+#profile_info .entry {
+	margin-left: 30px;
+	width: 300px;
+}
+
+#profile_info .label {
+	display: inline;
+	float: left;
+	text-align: right;
+}
+
+#profile_info .info {
+	display: inline;
+	float: right;
+	text-align: left;
+}
+
+#edit_info {
+	margin-left: 300px;
+	margin-right: 300px;
+}
+
+#edit_info h3 {
+	margin: 30px;
+}
+
+#edit_info #profile_photo {
+	margin-left: 20px;
+	margin-top: 30px;
+	padding-top: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+	float: left;
+	border: 5px solid black;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #888888
+}
+
+#edit_info .entry {
+	width: 700px;
+	margin: 20px;
+}
+
+#edit_info .entry label {
+	display: inline-block;
+	width: 250px;
+	text-align: right;
+}
+
+#edit_info .entry input {
+	display: inline-block;
+	margin-left: 15px;
+	width: 350px;
+}
+
+#edit_info .entry #birthday {
+	display: inline-block;
+	margin-left: 15px;
+	width: 350px;
+	text-align: left;
+}
+
+#edit_info #self_intro textarea {
+	display: inline-block;
+	width: 350px;
+	margin-left: 15px;
+}
+
+#edit_info #self_intro label {
+	vertical-align: top;
+}
+
+#edit_info button {
+	margin: 20px;
+}

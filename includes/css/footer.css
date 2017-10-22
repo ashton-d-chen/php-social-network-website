@@ -1,0 +1,39 @@
+#footer {
+	border-top: solid #666 2px;
+	margin-left: auto;
+	margin-right: auto;;
+	width: 1280px;
+	vertical-align: bottom;
+}
+
+#footer ul {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #666;
+	line-height: 30px;
+	white-space: nowrap;
+}
+
+#footer li {
+	list-style-type: none;
+	display: inline;
+}
+
+#footer li a {
+	text-decoration: none;
+	padding: 7px 10px;
+	color: #666;
+}
+
+#footer lia:link {
+	color: #FFF;
+}
+
+#footer lia:visited {
+	
+}
+
+#footer lia:hover {
+	font-weight: bold;
+	color: #FFF;
+}

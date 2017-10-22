@@ -1,0 +1,34 @@
+
+#myform {
+	border:1px outset #ccc;
+	background:#fff url(http://static.flowplayer.org/img/global/gradient/h600.png) repeat-x;
+	padding:20px;
+	margin:20px 0;
+	width:350px;
+	font-size:12px;
+	-moz-border-radius:4px;
+}
+
+#myform h3 {
+	text-align:center;
+	margin:0 0 10px 0;
+}
+
+/* http://www.quirksmode.org/css/forms.html */
+#inputs label, #inputs input, #inputs textarea, #inputs select {
+	display: block;
+	width: 150px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+#inputs label {
+	text-align: right;
+	width: 75px;
+	padding-right: 20px;
+}
+
+#inputs br {
+	clear: left;
+}
+
