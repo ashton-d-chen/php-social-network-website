@@ -1,0 +1,3 @@
+[submodule "php-library"]
+	path = php-library
+	url = https://AshtonChen@bitbucket.org/AshtonChen/php-library.git
