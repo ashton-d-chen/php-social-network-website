@@ -19,7 +19,7 @@ define ( 'LIVE', FALSE );
 define ( 'EMAIL', 'InsertRealAddressHere' );
 
 // Relative Path
-define ('RELATIVE_PATH', '/phpweb');
+define ('RELATIVE_PATH', '/backend');
 
 // Site URL (base for all redirections):
 define ('BASE_URL', '//' .$_SERVER['SERVER_NAME'] . RELATIVE_PATH);
